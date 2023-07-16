@@ -1,2 +1,13 @@
-import flask
+from flask import Flask
+
 print("My first commit!")
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return "Hello!"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
